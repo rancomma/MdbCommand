@@ -118,7 +118,37 @@ README
   2 colb2 False
   3 colb3  True
   4 colb4 False
-  
+
+  mdb> .show
+   autosize : on
+       echo : off
+    headers : on
+  nullvalue : ""
+    width :
+     wrap : on
+  mdb>
+  mdb> .help
+  .autosize ON|OFF       Like Format-Table AutoSize parameter
+  .begin                 Start transaction
+  .columns ?TABLE?       List columns
+  .commit                Commit transaction
+  .databases             Show database Info
+  .echo ON|OFF           Turn command echo on or off
+  .exit                  Exit this console
+  .headers ON|OFF        Turn display of headers on or off
+  .help                  Show this message
+  .indices ?T? ?C? ?I?   List indices
+  .nullvalue STRING      Print STRING in place of NULL values
+  .quit                  Exit this console
+  .rollback              Rollback transaction
+  .show                  Show the current values for various settings
+  .tables ?TABLE?        List tables
+  .views ?VIEW?          List querys and procedures
+  .width NUM1 NUM2 ...   Set column widths (If ".width" Then clear widths)
+  .wrap ON|OFF           Like Format-Table Wrap parameter
+  ; or / or GO           Enter SQL statements terminated
+  mdb>
+
   mdb> .quit
   C:\PS>
 
@@ -144,6 +174,9 @@ README
   .....................................
 
 
+  C:\PS>Close-Mdb
+
+  
   C:\PS>.mdb sample1.mdb
   
   C:\PS>.databases
