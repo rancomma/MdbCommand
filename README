@@ -1,0 +1,145 @@
+README
+
+  [MdbCommand Exsamples]
+
+  C:\PS>Open-Mdb newsample.mdb -Create
+
+  C:\PS>Invoke-Mdb 'Create Table table1 (a int not null constraint PK Primary Key, b varchar, 
+  c yesno)'
+  
+  C:\PS>invoke-mdb 'create table table2 (ID counter not null primary key, a int, b int)'
+  
+  C:\PS>invoke-mdb @'
+  create table table3 
+  (
+    col1 string(5),
+    col2 string(5),
+    a int,
+    constraint PK_table3 primary key (col1, col2)
+  )
+  '@
+
+  C:\PS>Get-Mdb
+  DatabaseName State  Transaction DataSource
+  ------------ -----  ----------- ----------
+  main         Open   No          C:\scripts\ps1\newsample.mdb
+
+  C:\PS>Get-MdbTable
+  TableName                  TableType  Description
+  ---------                  ---------  -----------
+  table1                     TABLE
+  table2                     TABLE
+  table3                     TABLE
+
+  C:\PS>Get-MdbColumn -TableName table1|ft -auto
+  TableName Pos ColumnName DataType AliasType Size NotNull Default PKey AutoInc
+  --------- --- ---------- -------- --------- ---- ------- ------- ---- -------
+  table1      1 a          INTEGER  int            YES             YES
+  table1      2 b          VARCHAR  string    255
+  table1      3 c          BIT      yesno          YES
+
+
+  C:\PS>Get-MdbIndex |ft -auto
+  TableName IndexName                Primary Unique Position ColumnName Collation
+  --------- ---------                ------- ------ -------- ---------- ---------
+  table1    PK                       YES     YES           1 a          ASC
+  table2    Index_7BC68A99_2CED_49DE YES     YES           1 ID         ASC
+  table3    PK_table3                YES     YES           1 col1       ASC
+  table3    PK_table3                YES     YES           2 col2       ASC
+
+
+  C:\PS>$list = new-object collections.arraylist
+  
+  C:\PS>$list.add(@(1,'colb1', $true))
+  
+  C:\PS>$list.add(@(2,'colb2', $false))
+  
+  C:\PS>$list.add(@(3,'colb3', $true))
+  
+  C:\PS>Invoke-MdbBatch 'Insert Into table1 (a, b, c) Values (?, ?, ?)' $list
+  
+  C:\PS>${MdbCommand.BatchTotalRecordsAffected}
+  3
+
+
+  C:\PS>Add-MdbQuery InsertTable1 'Insert Into Table1 (a, b, c) Values (?, ?, ?)'
+
+  C:\PS>Get-MdbQuery | ft -wrap
+  QueryName                 QueryType  SQL
+  ---------                 ---------  ---
+  InsertTable1              ACTION     INSERT INTO Table1 ( a, b, c )
+
+  C:\PS>Invoke-MdbQuery InsertTable1 -Value 4,'colb4',$false
+
+
+  C:\PS>Invoke-Mdb 'Select a, b, c From table1 Where a > ?' 1 | ft -auto
+  a b         c
+  - -         -
+  2 colb2 False
+  3 colb3  True
+  4 colb4 False
+
+  C:\PS>try
+  >> {
+  >>   Start-MdbTransaction
+  >>   
+  >>   Invoke-Mdb "Update table1 Set b = 'colb_change' Where a = 1"
+  >>   
+  >>   # processing
+  >>   
+  >>   Complete-MdbTransaction
+  >> }
+  >> catch
+  >> {
+  >>   Write-Warning "$_"
+  >>   Undo-MdbTransaction
+  >> }
+
+
+  C:\PS>Start-MdbConsole
+  mdb> select * from table1
+  ...> /
+  
+  a b         c
+  - -         -
+  1 colb1  True
+  2 colb2 False
+  3 colb3  True
+  4 colb4 False
+  
+  mdb> .quit
+  C:\PS>
+
+  C:\PS>Use-MdbAliasCommand -Prefix mdb-
+  C:\PS>get-alias mdb-*
+  CommandType     Name                                     Definition
+  -----------     ----                                     ----------
+  Alias           mdb-begin                                Start-MdbTransaction
+  Alias           mdb-close                                Close-Mdb
+  Alias           mdb-columns                              Get-MdbColumn
+  .....................................
+
+
+  C:\PS>Use-MdbDotCommand
+  C:\PS>get-alias .*
+  CommandType     Name                                     Definition
+  -----------     ----                                     ----------
+  Alias           .begin                                   Start-MdbTransaction
+  Alias           .close                                   Close-Mdb
+  Alias           .columns                                 Get-MdbColumn
+  Alias           .commit                                  Complete-MdbTransaction
+  Alias           .console                                 Start-MdbConsole
+  .....................................
+
+
+  C:\PS>.mdb sample1.mdb
+  
+  C:\PS>.databases
+  
+  C:\PS>.columns
+  
+  C:\PS>.querys
+  
+  C:\PS>.execute 'select * from table1'
+  
+  C:\PS>.quit
