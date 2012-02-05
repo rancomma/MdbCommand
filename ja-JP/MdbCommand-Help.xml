@@ -1,0 +1,3001 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<helpItems schema="maml">
+
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><command:details>
+<command:name>Add-MdbQuery</command:name>
+<maml:description>
+<maml:para>クエリーを登録します。</maml:para>
+</maml:description>
+<maml:copyright>
+<maml:para></maml:para>
+</maml:copyright>
+<command:verb>Add</command:verb>
+<command:noun>MdbQuery</command:noun>
+<dev:version></dev:version>
+</command:details>
+<maml:description>
+<maml:para>Add-MdbQuery は、SQL パラメーターに入力したクエリーをデータベースに登録します。</maml:para>
+</maml:description>
+<!-- Cmdlet syntax section-->
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Add-MdbQuery</maml:name>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="-2147483648">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+<command:parameter required="True" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>QueryName</maml:name>
+<maml:description>
+<maml:para>クエリー名を指定します。</maml:para>
+</maml:description>
+<command:parameterValue required="True" variableLength="True">string</command:parameterValue>
+</command:parameter>
+<command:parameter required="True" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="1">
+<maml:name>SQL</maml:name>
+<maml:description>
+<maml:para>SQLを指定します。パラメーターは、疑問符 (?) で示される位置指定パラメーターを使用します。</maml:para>
+</maml:description>
+<command:parameterValue required="True" variableLength="True">string</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<!-- Cmdlet parameter section  -->
+<command:parameters>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="-2147483648">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+<command:parameter required="True" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>QueryName</maml:name>
+<maml:description>
+<maml:para>クエリー名を指定します。</maml:para>
+</maml:description>
+<command:parameterValue required="True" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+<command:parameter required="True" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="1">
+<maml:name>SQL</maml:name>
+<maml:description>
+<maml:para>SQLを指定します。パラメーターは、疑問符 (?) で示される位置指定パラメーターを使用します。</maml:para>
+</maml:description>
+<command:parameterValue required="True" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+</command:parameters>
+<!-- Error section-->
+<command:terminatingErrors/>
+<command:nonTerminatingErrors/>
+<!-- Notes section  -->
+<maml:alertSet>
+<maml:title></maml:title>
+<maml:alert>
+<maml:para>
+</maml:para>
+</maml:alert>
+<maml:alert>
+<maml:para></maml:para>
+</maml:alert>
+</maml:alertSet>
+<!-- Example section  --> 
+<command:examples>
+<command:example>
+<maml:title>-------------------------- 例 1 --------------------------</maml:title> 
+<maml:introduction>
+<maml:para>C:\PS&gt;</maml:para>
+</maml:introduction> 
+<dev:code>Add-MdbQuery InsertTable1 'Insert Into Table1 (a, b, c) Values (?, ?, ?)'</dev:code>
+<dev:remarks>
+<maml:para>説明</maml:para>
+<maml:para>-----------</maml:para>
+<maml:para>このコマンドは、クエリー名、SQL文で、クエリーを登録します。
+</maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+<command:commandLines>
+<command:commandLine>
+<command:commandText></command:commandText>
+</command:commandLine>
+</command:commandLines>
+</command:example>
+</command:examples>
+<!-- Input - Output section-->
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+<maml:name>System.String</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>
+<maml:description>
+<maml:para>
+<!-- description  -->
+パイプを使用して、データベース名 (String)、クエリー名 (String)、または SQL (String) を Add-MdbQuery に渡すことができます。
+</maml:para>
+</maml:description>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>なし</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>   
+<maml:description>
+<maml:para>
+<!-- description  -->
+Add-MdbQuery は出力を生成しません。
+</maml:para>
+</maml:description> 
+</command:returnValue>
+</command:returnValues>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><command:details>
+<command:name>Close-Mdb</command:name>
+<maml:description>
+<maml:para>データベース接続を閉じます。</maml:para>
+</maml:description>
+<maml:copyright>
+<maml:para></maml:para>
+</maml:copyright>
+<command:verb>Close</command:verb>
+<command:noun>Mdb</command:noun>
+<dev:version></dev:version>
+</command:details>
+<maml:description>
+<maml:para>Close-Mdb は、開いているデータベース接続を閉じます。</maml:para>
+</maml:description>
+<!-- Cmdlet syntax section-->
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Close-Mdb</maml:name>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<!-- Cmdlet parameter section  -->
+<command:parameters>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+</command:parameters>
+<!-- Error section-->
+<command:terminatingErrors/>
+<command:nonTerminatingErrors/>
+<!-- Notes section  -->
+<maml:alertSet>
+<maml:title></maml:title>
+<maml:alert>
+<maml:para>
+</maml:para>
+</maml:alert>
+<maml:alert>
+<maml:para></maml:para>
+</maml:alert>
+</maml:alertSet>
+<!-- Example section  --> 
+<command:examples>
+<command:example>
+<maml:title>-------------------------- 例 1 --------------------------</maml:title> 
+<maml:introduction>
+<maml:para>C:\PS&gt;</maml:para>
+</maml:introduction> 
+<dev:code>Close-Mdb</dev:code>
+<dev:remarks>
+<maml:para>説明</maml:para>
+<maml:para>-----------</maml:para>
+<maml:para>このコマンドは、接続しているデータベースを閉じます。
+</maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+<command:commandLines>
+<command:commandLine>
+<command:commandText></command:commandText>
+</command:commandLine>
+</command:commandLines>
+</command:example>
+<command:example>
+<maml:title>-------------------------- 例 2 --------------------------</maml:title> 
+<maml:introduction>
+<maml:para>C:\PS&gt;</maml:para>
+</maml:introduction> 
+<dev:code>Close-Mdb main</dev:code>
+<dev:remarks>
+<maml:para>説明</maml:para>
+<maml:para>-----------</maml:para>
+<maml:para>このコマンドは、データベース名を指定して、接続しているデータベースを閉じます。
+</maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+<command:commandLines>
+<command:commandLine>
+<command:commandText></command:commandText>
+</command:commandLine>
+</command:commandLines>
+</command:example>
+</command:examples>
+<!-- Input - Output section-->
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+<maml:name>System.String</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>
+<maml:description>
+<maml:para>
+<!-- description  -->
+パイプを使用して、データベース名 (String) を Close-Mdb に渡すことができます。
+</maml:para>
+</maml:description>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>なし</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>   
+<maml:description>
+<maml:para>
+<!-- description  -->
+Close-Mdb は出力を生成しません。
+</maml:para>
+</maml:description> 
+</command:returnValue>
+</command:returnValues>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><command:details>
+<command:name>Complete-MdbTransaction</command:name>
+<maml:description>
+<maml:para>トランザクションをコミットします。</maml:para>
+</maml:description>
+<maml:copyright>
+<maml:para></maml:para>
+</maml:copyright>
+<command:verb>Complete</command:verb>
+<command:noun>MdbTransaction</command:noun>
+<dev:version></dev:version>
+</command:details>
+<maml:description>
+<maml:para>Complete-MdbTransaction は、開始しているトランザクションをコミットします。</maml:para>
+</maml:description>
+<!-- Cmdlet syntax section-->
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Complete-MdbTransaction</maml:name>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<!-- Cmdlet parameter section  -->
+<command:parameters>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+</command:parameters>
+<!-- Error section-->
+<command:terminatingErrors/>
+<command:nonTerminatingErrors/>
+<!-- Notes section  -->
+<maml:alertSet>
+<maml:title></maml:title>
+<maml:alert>
+<maml:para>
+</maml:para>
+</maml:alert>
+<maml:alert>
+<maml:para></maml:para>
+</maml:alert>
+</maml:alertSet>
+<!-- Example section  --> 
+<command:examples>
+<command:example>
+<maml:title>-------------------------- 例 1 --------------------------</maml:title> 
+<maml:introduction>
+<maml:para>C:\PS&gt;</maml:para>
+</maml:introduction> 
+<dev:code>Complete-MdbTransaction</dev:code>
+<dev:remarks>
+<maml:para>説明</maml:para>
+<maml:para>-----------</maml:para>
+<maml:para>このコマンドは、開始しているトランザクションをコミットします。
+</maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+<command:commandLines>
+<command:commandLine>
+<command:commandText></command:commandText>
+</command:commandLine>
+</command:commandLines>
+</command:example>
+</command:examples>
+<!-- Input - Output section-->
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+<maml:name>System.String</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>
+<maml:description>
+<maml:para>
+<!-- description  -->
+パイプを使用して、データベース名 (String) を Complete-MdbTransaction に渡すことができます。
+</maml:para>
+</maml:description>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>なし</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>   
+<maml:description>
+<maml:para>
+<!-- description  -->
+Complete-MdbTransaction は出力を生成しません。
+</maml:para>
+</maml:description> 
+</command:returnValue>
+</command:returnValues>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><command:details>
+<command:name>Get-Mdb</command:name>
+<maml:description>
+<maml:para>接続しているデータベースを取得します。</maml:para>
+</maml:description>
+<maml:copyright>
+<maml:para></maml:para>
+</maml:copyright>
+<command:verb>Get</command:verb>
+<command:noun>Mdb</command:noun>
+<dev:version></dev:version>
+</command:details>
+<maml:description>
+<maml:para>Get-Mdb は、接続しているデータベースを取得し、接続文字列やステータスを表示します。</maml:para>
+</maml:description>
+<!-- Cmdlet syntax section-->
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Get-Mdb</maml:name>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<!-- Cmdlet parameter section  -->
+<command:parameters>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+</command:parameters>
+<!-- Error section-->
+<command:terminatingErrors/>
+<command:nonTerminatingErrors/>
+<!-- Notes section  -->
+<maml:alertSet>
+<maml:title></maml:title>
+<maml:alert>
+<maml:para>
+</maml:para>
+</maml:alert>
+<maml:alert>
+<maml:para></maml:para>
+</maml:alert>
+</maml:alertSet>
+<!-- Example section  --> 
+<command:examples>
+<command:example>
+<maml:title>-------------------------- 例 1 --------------------------</maml:title> 
+<maml:introduction>
+<maml:para>C:\PS&gt;</maml:para>
+</maml:introduction> 
+<dev:code>Get-Mdb
+DatabaseName State  Transaction DataSource
+------------ -----  ----------- ----------
+main         Open   No          C:\scripts\ps1\newsample.mdb
+</dev:code>
+<dev:remarks>
+<maml:para>説明</maml:para>
+<maml:para>-----------</maml:para>
+<maml:para>このコマンドは、接続しているデータベース情報を取得します。
+</maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+<command:commandLines>
+<command:commandLine>
+<command:commandText></command:commandText>
+</command:commandLine>
+</command:commandLines>
+</command:example>
+</command:examples>
+<!-- Input - Output section-->
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+<maml:name>System.String</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>
+<maml:description>
+<maml:para>
+<!-- description  -->
+パイプを使用して、データベース名 (String) を Get-Mdb に渡すことができます。
+</maml:para>
+</maml:description>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>System.Management.Automation.PSObject</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>   
+<maml:description>
+<maml:para>
+<!-- description  -->
+Get-Mdb は、カスタムオブジェクト (MdbCommand.Mdb) を返します。
+</maml:para>
+</maml:description> 
+</command:returnValue>
+</command:returnValues>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><command:details>
+<command:name>Get-MdbColumn</command:name>
+<maml:description>
+<maml:para>テーブルの列を取得します。</maml:para>
+</maml:description>
+<maml:copyright>
+<maml:para></maml:para>
+</maml:copyright>
+<command:verb>Get</command:verb>
+<command:noun>MdbColumn</command:noun>
+<dev:version></dev:version>
+</command:details>
+<maml:description>
+<maml:para>Get-MdbColumn は、テーブルの列を取得し、データ型やサイズを表示します。</maml:para>
+</maml:description>
+<!-- Cmdlet syntax section-->
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Get-MdbColumn</maml:name>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="-2147483648">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="True" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>TableName</maml:name>
+<maml:description>
+<maml:para>指定されたテーブル名の情報を取得します。ワイルドカードを使用できます。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="1">
+<maml:name>ColumnName</maml:name>
+<maml:description>
+<maml:para>指定された列名の情報を取得します。ワイルドカードを使用できます。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<!-- Cmdlet parameter section  -->
+<command:parameters>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="-2147483648">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="True" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>TableName</maml:name>
+<maml:description>
+<maml:para>指定されたテーブル名の情報を取得します。ワイルドカードを使用できます。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="1">
+<maml:name>ColumnName</maml:name>
+<maml:description>
+<maml:para>指定された列名の情報を取得します。ワイルドカードを使用できます。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+</command:parameters>
+<!-- Error section-->
+<command:terminatingErrors/>
+<command:nonTerminatingErrors/>
+<!-- Notes section  -->
+<maml:alertSet>
+<maml:title></maml:title>
+<maml:alert>
+<maml:para>
+</maml:para>
+</maml:alert>
+<maml:alert>
+<maml:para></maml:para>
+</maml:alert>
+</maml:alertSet>
+<!-- Example section  --> 
+<command:examples>
+<command:example>
+<maml:title>-------------------------- 例 1 --------------------------</maml:title> 
+<maml:introduction>
+<maml:para>C:\PS&gt;</maml:para>
+</maml:introduction> 
+<dev:code>Get-MdbColumn -TableName table1|ft -auto
+TableName Pos ColumnName DataType AliasType Size NotNull Default PKey AutoInc
+--------- --- ---------- -------- --------- ---- ------- ------- ---- -------
+table1      1 a          INTEGER  int            YES             YES
+table1      2 b          VARCHAR  string    255
+table1      3 c          BIT      yesno          YES</dev:code>
+<dev:remarks>
+<maml:para>説明</maml:para>
+<maml:para>-----------</maml:para>
+<maml:para>このコマンドは、テーブル名パラメーターに指定しているテーブルの列情報を取得します。
+ft -auto コマンドをパイプで接続し、間隔を自動調整して表示します。
+</maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+<command:commandLines>
+<command:commandLine>
+<command:commandText></command:commandText>
+</command:commandLine>
+</command:commandLines>
+</command:example>
+</command:examples>
+<!-- Input - Output section-->
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+<maml:name>System.String</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>
+<maml:description>
+<maml:para>
+<!-- description  -->
+パイプを使用して、データベース名 (String) 、テーブル名 (String)、または 列名 (String) を Get-MdbColumn に渡すことができます。
+</maml:para>
+</maml:description>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>System.Management.Automation.PSObject</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>   
+<maml:description>
+<maml:para>
+<!-- description  -->
+Get-MdbColumn は、カスタムオブジェクト (MdbCommand.MdbColumn) を返します。
+</maml:para>
+</maml:description> 
+</command:returnValue>
+</command:returnValues>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><command:details>
+<command:name>Get-MdbIndex</command:name>
+<maml:description>
+<maml:para>テーブルのインデックスを取得します。</maml:para>
+</maml:description>
+<maml:copyright>
+<maml:para></maml:para>
+</maml:copyright>
+<command:verb>Get</command:verb>
+<command:noun>MdbIndex</command:noun>
+<dev:version></dev:version>
+</command:details>
+<maml:description>
+<maml:para>Get-MdbIndex は、テーブルのインデックスを取得し、種類や含んでいる列を表示します。</maml:para>
+</maml:description>
+<!-- Cmdlet syntax section-->
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Get-MdbIndex</maml:name>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="-2147483648">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="True" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>TableName</maml:name>
+<maml:description>
+<maml:para>指定されたテーブル名の情報を取得します。ワイルドカードを使用できます。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="True" pipelineInput="true (ByPropertyName)" position="1">
+<maml:name>ColumnName</maml:name>
+<maml:description>
+<maml:para>指定された列名の情報を取得します。ワイルドカードを使用できます。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="True" pipelineInput="true (ByPropertyName)" position="2">
+<maml:name>IndexName</maml:name>
+<maml:description>
+<maml:para>指定されたインデックス名の情報を取得します。ワイルドカードを使用できます。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<!-- Cmdlet parameter section  -->
+<command:parameters>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="-2147483648">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="True" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>TableName</maml:name>
+<maml:description>
+<maml:para>指定されたテーブル名の情報を取得します。ワイルドカードを使用できます。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="True" pipelineInput="true (ByPropertyName)" position="1">
+<maml:name>ColumnName</maml:name>
+<maml:description>
+<maml:para>指定された列名の情報を取得します。ワイルドカードを使用できます。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="True" pipelineInput="true (ByPropertyName)" position="2">
+<maml:name>IndexName</maml:name>
+<maml:description>
+<maml:para>指定されたインデックス名の情報を取得します。ワイルドカードを使用できます。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+</command:parameters>
+<!-- Error section-->
+<command:terminatingErrors/>
+<command:nonTerminatingErrors/>
+<!-- Notes section  -->
+<maml:alertSet>
+<maml:title></maml:title>
+<maml:alert>
+<maml:para>
+</maml:para>
+</maml:alert>
+<maml:alert>
+<maml:para></maml:para>
+</maml:alert>
+</maml:alertSet>
+<!-- Example section  --> 
+<command:examples>
+<command:example>
+<maml:title>-------------------------- 例 1 --------------------------</maml:title> 
+<maml:introduction>
+<maml:para>C:\PS&gt;</maml:para>
+</maml:introduction> 
+<dev:code>Get-MdbIndex |ft -auto
+TableName IndexName                Primary Unique Position ColumnName Collation
+--------- ---------                ------- ------ -------- ---------- ---------
+table1    PK                       YES     YES           1 a          ASC
+table2    Index_7BC68A99_2CED_49DE YES     YES           1 ID         ASC
+table3    PK_table3                YES     YES           1 col1       ASC
+table3    PK_table3                YES     YES           2 col2       ASC</dev:code>
+<dev:remarks>
+<maml:para>説明</maml:para>
+<maml:para>-----------</maml:para>
+<maml:para>このコマンドは、インデックスの一覧を取得します。
+</maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+<command:commandLines>
+<command:commandLine>
+<command:commandText></command:commandText>
+</command:commandLine>
+</command:commandLines>
+</command:example>
+</command:examples>
+<!-- Input - Output section-->
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+<maml:name>System.String</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>
+<maml:description>
+<maml:para>
+<!-- description  -->
+パイプを使用して、データベース名 (String) 、テーブル名 (String)、 列名 (String)、または インデックス名 (String) を Get-MdbIndex に渡すことができます。
+</maml:para>
+</maml:description>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>System.Management.Automation.PSObject</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>   
+<maml:description>
+<maml:para>
+<!-- description  -->
+Get-MdbIndex は、カスタムオブジェクト (MdbCommand.MdbIndex) を返します。
+</maml:para>
+</maml:description> 
+</command:returnValue>
+</command:returnValues>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><command:details>
+<command:name>Get-MdbQuery</command:name>
+<maml:description>
+<maml:para>クエリーを取得します。</maml:para>
+</maml:description>
+<maml:copyright>
+<maml:para></maml:para>
+</maml:copyright>
+<command:verb>Get</command:verb>
+<command:noun>MdbQuery</command:noun>
+<dev:version></dev:version>
+</command:details>
+<maml:description>
+<maml:para>Get-MdbQuery は、クエリーを取得し、名称や SQL を表示します。</maml:para>
+</maml:description>
+<!-- Cmdlet syntax section-->
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Get-MdbQuery</maml:name>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="-2147483648">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="True" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>QueryName</maml:name>
+<maml:description>
+<maml:para>指定されたクエリー名の情報を取得します。ワイルドカードを使用できます。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<!-- Cmdlet parameter section  -->
+<command:parameters>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="-2147483648">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="True" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>QueryName</maml:name>
+<maml:description>
+<maml:para>指定されたクエリー名の情報を取得します。ワイルドカードを使用できます。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+</command:parameters>
+<!-- Error section-->
+<command:terminatingErrors/>
+<command:nonTerminatingErrors/>
+<!-- Notes section  -->
+<maml:alertSet>
+<maml:title></maml:title>
+<maml:alert>
+<maml:para>
+</maml:para>
+</maml:alert>
+<maml:alert>
+<maml:para></maml:para>
+</maml:alert>
+</maml:alertSet>
+<!-- Example section  --> 
+<command:examples>
+<command:example>
+<maml:title>-------------------------- 例 1 --------------------------</maml:title> 
+<maml:introduction>
+<maml:para>C:\PS&gt;</maml:para>
+</maml:introduction> 
+<dev:code>Get-MdbQuery | ft -wrap
+QueryName                 QueryType  SQL
+---------                 ---------  ---
+InsertTable1              ACTION     INSERT INTO Table1 ( a, b, c )
+                                     VALUES (?, ?, ?);</dev:code>
+<dev:remarks>
+<maml:para>説明</maml:para>
+<maml:para>-----------</maml:para>
+<maml:para>このコマンドはクエリーの一覧を取得します。
+ft -wrap コマンドをパイプで接続し、複数行で表示します。
+</maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+<command:commandLines>
+<command:commandLine>
+<command:commandText></command:commandText>
+</command:commandLine>
+</command:commandLines>
+</command:example>
+</command:examples>
+<!-- Input - Output section-->
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+<maml:name>System.String</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>
+<maml:description>
+<maml:para>
+<!-- description  -->
+パイプを使用して、データベース名 (String)、または クエリー名 (String) を Get-MdbQuery に渡すことができます。
+</maml:para>
+</maml:description>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>System.Management.Automation.PSObject</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>   
+<maml:description>
+<maml:para>
+<!-- description  -->
+Get-MdbQuery は、カスタムオブジェクト (MdbCommand.MdbQuery) を返します。
+</maml:para>
+</maml:description> 
+</command:returnValue>
+</command:returnValues>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><command:details>
+<command:name>Get-MdbTable</command:name>
+<maml:description>
+<maml:para>テーブルを取得します。</maml:para>
+</maml:description>
+<maml:copyright>
+<maml:para></maml:para>
+</maml:copyright>
+<command:verb>Get</command:verb>
+<command:noun>MdbTable</command:noun>
+<dev:version></dev:version>
+</command:details>
+<maml:description>
+<maml:para>Get-MdbTable は、テーブルを取得し、名称や種類を表示します。</maml:para>
+</maml:description>
+<!-- Cmdlet syntax section-->
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Get-MdbTable</maml:name>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="-2147483648">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="True" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>TableName</maml:name>
+<maml:description>
+<maml:para>指定されたテーブル名の情報を取得します。ワイルドカードを使用できます。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<!-- Cmdlet parameter section  -->
+<command:parameters>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="-2147483648">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="True" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>TableName</maml:name>
+<maml:description>
+<maml:para>指定されたテーブル名の情報を取得します。ワイルドカードを使用できます。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+</command:parameters>
+<!-- Error section-->
+<command:terminatingErrors/>
+<command:nonTerminatingErrors/>
+<!-- Notes section  -->
+<maml:alertSet>
+<maml:title></maml:title>
+<maml:alert>
+<maml:para>
+</maml:para>
+</maml:alert>
+<maml:alert>
+<maml:para></maml:para>
+</maml:alert>
+</maml:alertSet>
+<!-- Example section  --> 
+<command:examples>
+<command:example>
+<maml:title>-------------------------- 例 1 --------------------------</maml:title> 
+<maml:introduction>
+<maml:para>C:\PS&gt;</maml:para>
+</maml:introduction> 
+<dev:code>Get-MdbTable
+TableName                  TableType  Description
+---------                  ---------  -----------
+table1                     TABLE
+table2                     TABLE
+table3                     TABLE
+</dev:code>
+<dev:remarks>
+<maml:para>説明</maml:para>
+<maml:para>-----------</maml:para>
+<maml:para>このコマンドは、テーブルの一覧を取得します。
+</maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+<command:commandLines>
+<command:commandLine>
+<command:commandText></command:commandText>
+</command:commandLine>
+</command:commandLines>
+</command:example>
+</command:examples>
+<!-- Input - Output section-->
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+<maml:name>System.String</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>
+<maml:description>
+<maml:para>
+<!-- description  -->
+パイプを使用して、データベース名 (String)、または テーブル名 (String) を Get-MdbTable に渡すことができます。
+</maml:para>
+</maml:description>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>System.Management.Automation.PSObject</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>   
+<maml:description>
+<maml:para>
+<!-- description  -->
+Get-MdbTable は、カスタムオブジェクト (MdbCommand.MdbTable) を返します。
+</maml:para>
+</maml:description> 
+</command:returnValue>
+</command:returnValues>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><command:details>
+<command:name>Invoke-Mdb</command:name>
+<maml:description>
+<maml:para>SQLを実行します。</maml:para>
+</maml:description>
+<maml:copyright>
+<maml:para></maml:para>
+</maml:copyright>
+<command:verb>Invoke</command:verb>
+<command:noun>Mdb</command:noun>
+<dev:version></dev:version>
+</command:details>
+<maml:description>
+<maml:para>Invoke-Mdbは、SQL パラメーターに入力した SQL 文を、実行します。</maml:para>
+</maml:description>
+<!-- Cmdlet syntax section-->
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Invoke-Mdb</maml:name>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByValue)" position="-2147483648">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+<command:parameter required="True" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>SQL</maml:name>
+<maml:description>
+<maml:para>SQLを指定します。パラメーターは、疑問符 (?) で示される位置指定パラメーターを使用します。</maml:para>
+</maml:description>
+<command:parameterValue required="True" variableLength="True">string</command:parameterValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="1">
+<maml:name>Value</maml:name>
+<maml:description>
+<maml:para>パラメーター値を指定します。SQLにあるパラメーターの個数分、パラメーター値を指定する必要があります。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">object[]</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<!-- Cmdlet parameter section  -->
+<command:parameters>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByValue)" position="-2147483648">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+<command:parameter required="True" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>SQL</maml:name>
+<maml:description>
+<maml:para>SQLを指定します。パラメーターは、疑問符 (?) で示される位置指定パラメーターを使用します。</maml:para>
+</maml:description>
+<command:parameterValue required="True" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="1">
+<maml:name>Value</maml:name>
+<maml:description>
+<maml:para>パラメーター値を指定します。SQLにあるパラメーターの個数分、パラメーター値を指定する必要があります。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">object[]</command:parameterValue>
+<dev:type>
+<maml:name>object[]</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+</command:parameters>
+<!-- Error section-->
+<command:terminatingErrors/>
+<command:nonTerminatingErrors/>
+<!-- Notes section  -->
+<maml:alertSet>
+<maml:title></maml:title>
+<maml:alert>
+<maml:para>
+</maml:para>
+</maml:alert>
+<maml:alert>
+<maml:para></maml:para>
+</maml:alert>
+</maml:alertSet>
+<!-- Example section  --> 
+<command:examples>
+<command:example>
+<maml:title>-------------------------- 例 1 --------------------------</maml:title> 
+<maml:introduction>
+<maml:para>C:\PS&gt;</maml:para>
+</maml:introduction> 
+<dev:code>Invoke-Mdb 'Create Table table1 (a int not null constraint PK Primary Key, b varchar, c yesno)'
+
+C:\PS>invoke-mdb 'create table table2 (ID counter not null primary key, a int, b int)'
+
+C:\PS>invoke-mdb @'
+create table table3 
+(
+  col1 string(5),
+  col2 string(5),
+  a int,
+  constraint PK_table3 primary key (col1, col2)
+)
+'@
+</dev:code>
+<dev:remarks>
+<maml:para>説明</maml:para>
+<maml:para>-----------</maml:para>
+<maml:para>このコマンドは、SQLパラメーターに指定している SQL 文を実行して、テーブルを作成します。
+</maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+<command:commandLines>
+<command:commandLine>
+<command:commandText></command:commandText>
+</command:commandLine>
+</command:commandLines>
+</command:example>
+<command:example>
+<maml:title>-------------------------- 例 2 --------------------------</maml:title> 
+<maml:introduction>
+<maml:para>C:\PS&gt;</maml:para>
+</maml:introduction> 
+<dev:code>Invoke-Mdb 'Select a, b, c From table1 Where a > ?' 1 | ft -auto
+a b         c
+- -         -
+2 colb2 False
+3 colb3  True
+4 colb4 False</dev:code>
+<dev:remarks>
+<maml:para>説明</maml:para>
+<maml:para>-----------</maml:para>
+<maml:para>このコマンドは、SQLパラメーターに指定している SQL 文を、値パラメーター（1）に設定されている値で実行し、一覧表示します。
+</maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+<command:commandLines>
+<command:commandLine>
+<command:commandText></command:commandText>
+</command:commandLine>
+</command:commandLines>
+</command:example>
+<command:example>
+<maml:title>-------------------------- 例 3 --------------------------</maml:title> 
+<maml:introduction>
+<maml:para>C:\PS&gt;</maml:para>
+</maml:introduction> 
+<dev:code>Invoke-Mdb "Update table1 Set b = 'colb_change' Where a = 1"
+
+C:\PS>${MdbCommand.RecordsAffected}
+1
+</dev:code>
+<dev:remarks>
+<maml:para>説明</maml:para>
+<maml:para>-----------</maml:para>
+<maml:para>このコマンドは、SQLパラメーターに指定している SQL 文を実行し、データを更新します。
+影響された行数は、MdbCommand.RecordsAffected 変数で確認できます。
+
+</maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+<command:commandLines>
+<command:commandLine>
+<command:commandText></command:commandText>
+</command:commandLine>
+</command:commandLines>
+</command:example>
+</command:examples>
+<!-- Input - Output section-->
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+<maml:name>System.String、System.Object[]</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>
+<maml:description>
+<maml:para>
+<!-- description  -->
+パイプを使用して、データベース名 (String)、SQL (String)、または 値 (Object[]) を Invoke-Mdb に渡すことができます。
+</maml:para>
+</maml:description>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>なし または System.Management.Automation.PSObject</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>   
+<maml:description>
+<maml:para>
+<!-- description  -->
+Invoke-Mdb は、指定された SQL が、SELECT文の場合、カスタムオブジェクト (MdbCommand.MdbRecord) を返します。それ以外の場合出力はありません。
+</maml:para>
+</maml:description> 
+</command:returnValue>
+</command:returnValues>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><command:details>
+<command:name>Invoke-MdbBatch</command:name>
+<maml:description>
+<maml:para>SQLを複数回実行します。</maml:para>
+</maml:description>
+<maml:copyright>
+<maml:para></maml:para>
+</maml:copyright>
+<command:verb>Invoke</command:verb>
+<command:noun>MdbBatch</command:noun>
+<dev:version></dev:version>
+</command:details>
+<maml:description>
+<maml:para>Invoke-MdbBatch は、SQLパラメーターに入力した SQL 文を、ValueList パラメーターに設定されている値で複数回実行します。</maml:para>
+</maml:description>
+<!-- Cmdlet syntax section-->
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Invoke-MdbBatch</maml:name>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="-2147483648">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+<command:parameter required="True" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>SQL</maml:name>
+<maml:description>
+<maml:para>SQLを指定します。パラメーターは、疑問符 (?) で示される位置指定パラメーターを使用します。</maml:para>
+</maml:description>
+<command:parameterValue required="True" variableLength="True">string</command:parameterValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="1">
+<maml:name>ValueList</maml:name>
+<maml:description>
+<maml:para>パラメーター値を複数の組み合わせで指定します。SQLにあるパラメーターの個数分、パラメーター値を指定する必要があります。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">ArrayList</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<!-- Cmdlet parameter section  -->
+<command:parameters>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="-2147483648">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+<command:parameter required="True" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>SQL</maml:name>
+<maml:description>
+<maml:para>SQLを指定します。パラメーターは、疑問符 (?) で示される位置指定パラメーターを使用します。</maml:para>
+</maml:description>
+<command:parameterValue required="True" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="1">
+<maml:name>ValueList</maml:name>
+<maml:description>
+<maml:para>パラメーター値を複数の組み合わせで指定します。SQLにあるパラメーターの個数分、パラメーター値を指定する必要があります。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">ArrayList</command:parameterValue>
+<dev:type>
+<maml:name>ArrayList</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+</command:parameters>
+<!-- Error section-->
+<command:terminatingErrors/>
+<command:nonTerminatingErrors/>
+<!-- Notes section  -->
+<maml:alertSet>
+<maml:title></maml:title>
+<maml:alert>
+<maml:para>
+</maml:para>
+</maml:alert>
+<maml:alert>
+<maml:para></maml:para>
+</maml:alert>
+</maml:alertSet>
+<!-- Example section  --> 
+<command:examples>
+<command:example>
+<maml:title>-------------------------- 例 1 --------------------------</maml:title> 
+<maml:introduction>
+<maml:para>C:\PS&gt;</maml:para>
+</maml:introduction> 
+<dev:code>$list = new-object collections.arraylist
+
+C:\PS>$list.add(@(1,'colb1', $true))
+
+C:\PS>$list.add(@(2,'colb2', $false))
+
+C:\PS>$list.add(@(3,'colb3', $true))
+
+C:\PS>Invoke-MdbBatch 'Insert Into table1 (a, b, c) Values (?, ?, ?)' $list
+
+C:\PS>${MdbCommand.BatchTotalRecordsAffected}
+3
+</dev:code>
+<dev:remarks>
+<maml:para>説明</maml:para>
+<maml:para>-----------</maml:para>
+<maml:para>このコマンドは、SQLパラメーターに指定している SQL 文を、値リストパラメーターに設定されている値の組合せで複数回実行します。
+影響された行数は、MdbCommand.BatchTotalRecordsAffected 変数で確認できます。
+</maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+<command:commandLines>
+<command:commandLine>
+<command:commandText></command:commandText>
+</command:commandLine>
+</command:commandLines>
+</command:example>
+</command:examples>
+<!-- Input - Output section-->
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+<maml:name>System.String、System.Collections.ArrayList</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>
+<maml:description>
+<maml:para>
+<!-- description  -->
+パイプを使用して、データベース名 (String)、SQL (String)、または 値のリスト (System.Collections.ArrayList) を Invoke-MdbBatch に渡すことができます。
+</maml:para>
+</maml:description>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>なし または System.Management.Automation.PSObject</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>   
+<maml:description>
+<maml:para>
+<!-- description  -->
+Invoke-MdbBatch は、指定された SQL が、SELECT文の場合、カスタムオブジェクト (MdbCommand.MdbRecord) を返します。それ以外の場合出力はありません。
+</maml:para>
+</maml:description> 
+</command:returnValue>
+</command:returnValues>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><command:details>
+<command:name>Invoke-MdbQuery</command:name>
+<maml:description>
+<maml:para>クエリーを実行します。</maml:para>
+</maml:description>
+<maml:copyright>
+<maml:para></maml:para>
+</maml:copyright>
+<command:verb>Invoke</command:verb>
+<command:noun>MdbQuery</command:noun>
+<dev:version></dev:version>
+</command:details>
+<maml:description>
+<maml:para>Invoke-MdbQuery は、指定されたクエリー名で、SQLを取得し、実行します。</maml:para>
+</maml:description>
+<!-- Cmdlet syntax section-->
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Invoke-MdbQuery</maml:name>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="-2147483648">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+<command:parameter required="True" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>QueryName</maml:name>
+<maml:description>
+<maml:para>指定されたクエリー名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="True" variableLength="True">string</command:parameterValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="1">
+<maml:name>Value</maml:name>
+<maml:description>
+<maml:para>パラメーター値を指定します。クエリーのSQLにあるパラメーターの個数分、パラメーター値を指定する必要があります。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">object[]</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<!-- Cmdlet parameter section  -->
+<command:parameters>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="-2147483648">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+<command:parameter required="True" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>QueryName</maml:name>
+<maml:description>
+<maml:para>指定されたクエリー名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="True" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="1">
+<maml:name>Value</maml:name>
+<maml:description>
+<maml:para>パラメーター値を指定します。クエリーのSQLにあるパラメーターの個数分、パラメーター値を指定する必要があります。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">object[]</command:parameterValue>
+<dev:type>
+<maml:name>object[]</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+</command:parameters>
+<!-- Error section-->
+<command:terminatingErrors/>
+<command:nonTerminatingErrors/>
+<!-- Notes section  -->
+<maml:alertSet>
+<maml:title></maml:title>
+<maml:alert>
+<maml:para>
+</maml:para>
+</maml:alert>
+<maml:alert>
+<maml:para></maml:para>
+</maml:alert>
+</maml:alertSet>
+<!-- Example section  --> 
+<command:examples>
+<command:example>
+<maml:title>-------------------------- 例 1 --------------------------</maml:title> 
+<maml:introduction>
+<maml:para>C:\PS&gt;</maml:para>
+</maml:introduction> 
+<dev:code>Invoke-MdbQuery InsertTable1 -Value 4,'colb4',$false</dev:code>
+<dev:remarks>
+<maml:para>説明</maml:para>
+<maml:para>-----------</maml:para>
+<maml:para>このコマンドは、クエリー名パラメーターに指定しているクエリーの SQL 文を取得し、値パラメーターに設定されている値で実行します。
+</maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+<command:commandLines>
+<command:commandLine>
+<command:commandText></command:commandText>
+</command:commandLine>
+</command:commandLines>
+</command:example>
+</command:examples>
+<!-- Input - Output section-->
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+<maml:name>System.String、System.Object[]</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>
+<maml:description>
+<maml:para>
+<!-- description  -->
+パイプを使用して、データベース名 (String)、クエリー名  (String)、または 値 (Object[]) を Invoke-MdbQuery に渡すことができます。
+</maml:para>
+</maml:description>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>なし または System.Management.Automation.PSObject</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>   
+<maml:description>
+<maml:para>
+<!-- description  -->
+Invoke-MdbQuery は、指定された クエリーの種類が、ビュー (VIEW) の場合、カスタムオブジェクト (MdbCommand.MdbRecord) を返します。それ以外の場合出力はありません。
+</maml:para>
+</maml:description> 
+</command:returnValue>
+</command:returnValues>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><command:details>
+<command:name>Open-Mdb</command:name>
+<maml:description>
+<maml:para>Mｄｂファイルとのデータベース接続を開きます。</maml:para>
+</maml:description>
+<maml:copyright>
+<maml:para></maml:para>
+</maml:copyright>
+<command:verb>Open</command:verb>
+<command:noun>Mdb</command:noun>
+<dev:version></dev:version>
+</command:details>
+<maml:description>
+<maml:para>Open-Mdb は、指定されたMdbファイルとのデータベース接続を開きます。
+データベースは一意となるデータベース名で管理します。
+データベース名の規定値は、mainです。</maml:para>
+</maml:description>
+<!-- Cmdlet syntax section-->
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Open-Mdb</maml:name>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="-2147483648">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>データベース名を指定します。規定値は、"main"です。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+<command:parameter required="True" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>File</maml:name>
+<maml:description>
+<maml:para>Mdbファイルのパスを指定します。</maml:para>
+</maml:description>
+<command:parameterValue required="True" variableLength="True">string</command:parameterValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="1">
+<maml:name>Password</maml:name>
+<maml:description>
+<maml:para>Mdbファイルのパスワードを指定します。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+<command:parameter required="False" variableLength="False" globbing="False" pipelineInput="False" position="-2147483648">
+<maml:name>Create</maml:name>
+<maml:description>
+<maml:para>指定されたファイル名で、Mdbファイルを作成します。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="False">SwitchParameter</command:parameterValue>
+</command:parameter>
+<command:parameter required="False" variableLength="False" globbing="False" pipelineInput="False" position="-2147483648">
+<maml:name>PassThru</maml:name>
+<maml:description>
+<maml:para>データベースの接続情報を出力します。規定では、Open-Mdb による出力はありません。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="False">SwitchParameter</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<!-- Cmdlet parameter section  -->
+<command:parameters>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="-2147483648">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>データベース名を指定します。規定値は、"main"です。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue>main</dev:defaultValue>
+</command:parameter>
+<command:parameter required="True" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>File</maml:name>
+<maml:description>
+<maml:para>Mdbファイルのパスを指定します。</maml:para>
+</maml:description>
+<command:parameterValue required="True" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="1">
+<maml:name>Password</maml:name>
+<maml:description>
+<maml:para>Mdbファイルのパスワードを指定します。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+<command:parameter required="False" variableLength="False" globbing="False" pipelineInput="False" position="-2147483648">
+<maml:name>Create</maml:name>
+<maml:description>
+<maml:para>指定されたファイル名で、Mdbファイルを作成します。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="False">SwitchParameter</command:parameterValue>
+<dev:type>
+<maml:name>SwitchParameter</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+<command:parameter required="False" variableLength="False" globbing="False" pipelineInput="False" position="-2147483648">
+<maml:name>PassThru</maml:name>
+<maml:description>
+<maml:para>データベースの接続情報を出力します。規定では、Open-Mdb による出力はありません。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="False">SwitchParameter</command:parameterValue>
+<dev:type>
+<maml:name>SwitchParameter</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+</command:parameters>
+<!-- Error section-->
+<command:terminatingErrors/>
+<command:nonTerminatingErrors/>
+<!-- Notes section  -->
+<maml:alertSet>
+<maml:title></maml:title>
+<maml:alert>
+<maml:para>
+</maml:para>
+</maml:alert>
+<maml:alert>
+<maml:para></maml:para>
+</maml:alert>
+</maml:alertSet>
+<!-- Example section  --> 
+<command:examples>
+<command:example>
+<maml:title>-------------------------- 例 1 --------------------------</maml:title> 
+<maml:introduction>
+<maml:para>C:\PS&gt;</maml:para>
+</maml:introduction> 
+<dev:code>Open-Mdb sample.mdb</dev:code>
+<dev:remarks>
+<maml:para>説明</maml:para>
+<maml:para>-----------</maml:para>
+<maml:para>このコマンドは、現在のディレクトリにある sample.mdb ファイルとのデータベース接続を開始します。
+</maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+<command:commandLines>
+<command:commandLine>
+<command:commandText></command:commandText>
+</command:commandLine>
+</command:commandLines>
+</command:example>
+<command:example>
+<maml:title>-------------------------- 例 2 --------------------------</maml:title> 
+<maml:introduction>
+<maml:para>C:\PS&gt;</maml:para>
+</maml:introduction> 
+<dev:code>Open-Mdb newsample.mdb -Create</dev:code>
+<dev:remarks>
+<maml:para>説明</maml:para>
+<maml:para>-----------</maml:para>
+<maml:para>このコマンドは、現在のディレクトリに newsample.mdb ファイルを作成し、データベース接続を開始します。
+</maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+<command:commandLines>
+<command:commandLine>
+<command:commandText></command:commandText>
+</command:commandLine>
+</command:commandLines>
+</command:example>
+<command:example>
+<maml:title>-------------------------- 例 3 --------------------------</maml:title> 
+<maml:introduction>
+<maml:para>C:\PS&gt;</maml:para>
+</maml:introduction> 
+<dev:code>Open-Mdb ../folder/encrypt.mdb -password P@ssW0rD!</dev:code>
+<dev:remarks>
+<maml:para>説明</maml:para>
+<maml:para>-----------</maml:para>
+<maml:para>このコマンドは、相対パスを指定して、encrypt.mdb ファイルとのデータベース接続を開始します。
+Mdb ファイルはパスワードで保護されているため、パスワードパラメーターに指定します。
+</maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+<command:commandLines>
+<command:commandLine>
+<command:commandText></command:commandText>
+</command:commandLine>
+</command:commandLines>
+</command:example>
+</command:examples>
+<!-- Input - Output section-->
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+<maml:name>System.String</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>
+<maml:description>
+<maml:para>
+<!-- description  -->
+パイプを使用して、データベース名 (String)、ファイル名  (String)、または パスワード (String) を Open-Mdb に渡すことができます。
+</maml:para>
+</maml:description>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>なし または System.Management.Automation.PSObject</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>   
+<maml:description>
+<maml:para>
+<!-- description  -->
+Open-Mdb は、PassThru パラメーターを使用すると、カスタムオブジェクト (MdbCommand.Mdb) を返します。それ以外の場合出力はありません。
+</maml:para>
+</maml:description> 
+</command:returnValue>
+</command:returnValues>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><command:details>
+<command:name>Remove-MdbQuery</command:name>
+<maml:description>
+<maml:para>クエリーを削除します。</maml:para>
+</maml:description>
+<maml:copyright>
+<maml:para></maml:para>
+</maml:copyright>
+<command:verb>Remove</command:verb>
+<command:noun>MdbQuery</command:noun>
+<dev:version></dev:version>
+</command:details>
+<maml:description>
+<maml:para>Remove-MdbQuery は、指定されたクエリー名で、クエリーを削除します。</maml:para>
+</maml:description>
+<!-- Cmdlet syntax section-->
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Remove-MdbQuery</maml:name>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="-2147483648">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+<command:parameter required="True" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>QueryName</maml:name>
+<maml:description>
+<maml:para>指定されたクエリー名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="True" variableLength="True">string</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<!-- Cmdlet parameter section  -->
+<command:parameters>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="-2147483648">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+<command:parameter required="True" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>QueryName</maml:name>
+<maml:description>
+<maml:para>指定されたクエリー名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="True" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+</command:parameters>
+<!-- Error section-->
+<command:terminatingErrors/>
+<command:nonTerminatingErrors/>
+<!-- Notes section  -->
+<maml:alertSet>
+<maml:title></maml:title>
+<maml:alert>
+<maml:para>
+</maml:para>
+</maml:alert>
+<maml:alert>
+<maml:para></maml:para>
+</maml:alert>
+</maml:alertSet>
+<!-- Example section  --> 
+<command:examples>
+<command:example>
+<maml:title>-------------------------- 例 1 --------------------------</maml:title> 
+<maml:introduction>
+<maml:para>C:\PS&gt;</maml:para>
+</maml:introduction> 
+<dev:code>Remove-MdbQuery InsertTable1</dev:code>
+<dev:remarks>
+<maml:para>説明</maml:para>
+<maml:para>-----------</maml:para>
+<maml:para>このコマンドは、クエリー名パラメーターに指定しているクエリーを削除します。
+</maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+<command:commandLines>
+<command:commandLine>
+<command:commandText></command:commandText>
+</command:commandLine>
+</command:commandLines>
+</command:example>
+</command:examples>
+<!-- Input - Output section-->
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+<maml:name>System.String</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>
+<maml:description>
+<maml:para>
+<!-- description  -->
+パイプを使用して、データベース名 (String)、または クエリー名 (String) を Remove-MdbQuery に渡すことができます。
+</maml:para>
+</maml:description>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>なし</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>   
+<maml:description>
+<maml:para>
+<!-- description  -->
+Remove-MdbQuery は出力を生成しません。
+</maml:para>
+</maml:description> 
+</command:returnValue>
+</command:returnValues>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><command:details>
+<command:name>Start-MdbConsole</command:name>
+<maml:description>
+<maml:para>SQL 文を直接入力し、実行できるコンソールを開始します。</maml:para>
+</maml:description>
+<maml:copyright>
+<maml:para></maml:para>
+</maml:copyright>
+<command:verb>Start</command:verb>
+<command:noun>MdbConsole</command:noun>
+<dev:version></dev:version>
+</command:details>
+<maml:description>
+<maml:para>Start-MdbConsole は、SQL 文を直接入力し、実行できるコンソールを開始します。
+.help を入力するとコマンドのヘルプを参照できます。
+SQL 文入力後、";"、"/"、または"GO" で実行します。</maml:para>
+</maml:description>
+<!-- Cmdlet syntax section-->
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Start-MdbConsole</maml:name>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<!-- Cmdlet parameter section  -->
+<command:parameters>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+</command:parameters>
+<!-- Error section-->
+<command:terminatingErrors/>
+<command:nonTerminatingErrors/>
+<!-- Notes section  -->
+<maml:alertSet>
+<maml:title></maml:title>
+<maml:alert>
+<maml:para>
+</maml:para>
+</maml:alert>
+<maml:alert>
+<maml:para></maml:para>
+</maml:alert>
+</maml:alertSet>
+<!-- Example section  --> 
+<command:examples>
+<command:example>
+<maml:title>-------------------------- 例 1 --------------------------</maml:title> 
+<maml:introduction>
+<maml:para>C:\PS&gt;</maml:para>
+</maml:introduction> 
+<dev:code>Start-MdbConsole
+mdb> select * from table1
+...> /
+
+a b         c
+- -         -
+1 colb1  True
+2 colb2 False
+3 colb3  True
+4 colb4 False
+
+
+mdb> .quit
+</dev:code>
+<dev:remarks>
+<maml:para>説明</maml:para>
+<maml:para>-----------</maml:para>
+<maml:para>このコマンドは、コンソールを開始し、SQL 文を直接入力して実行します。
+SQL は / 、 ; 、 GO で実行します。
+.quit でコンソールを終了します。
+</maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+<command:commandLines>
+<command:commandLine>
+<command:commandText></command:commandText>
+</command:commandLine>
+</command:commandLines>
+</command:example>
+</command:examples>
+<!-- Input - Output section-->
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+<maml:name>System.String</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>
+<maml:description>
+<maml:para>
+<!-- description  -->
+パイプを使用して、データベース名 (String) を Start-MdbConsole に渡すことができます。
+</maml:para>
+</maml:description>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>なし</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>   
+<maml:description>
+<maml:para>
+<!-- description  -->
+Start-MdbConsole は出力を生成しません。
+</maml:para>
+</maml:description> 
+</command:returnValue>
+</command:returnValues>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><command:details>
+<command:name>Start-MdbTransaction</command:name>
+<maml:description>
+<maml:para>トランザクションを開始します。</maml:para>
+</maml:description>
+<maml:copyright>
+<maml:para></maml:para>
+</maml:copyright>
+<command:verb>Start</command:verb>
+<command:noun>MdbTransaction</command:noun>
+<dev:version></dev:version>
+</command:details>
+<maml:description>
+<maml:para>Start-MdbTransaction は、トランザクションを開始します。</maml:para>
+</maml:description>
+<!-- Cmdlet syntax section-->
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Start-MdbTransaction</maml:name>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<!-- Cmdlet parameter section  -->
+<command:parameters>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+</command:parameters>
+<!-- Error section-->
+<command:terminatingErrors/>
+<command:nonTerminatingErrors/>
+<!-- Notes section  -->
+<maml:alertSet>
+<maml:title></maml:title>
+<maml:alert>
+<maml:para>
+</maml:para>
+</maml:alert>
+<maml:alert>
+<maml:para></maml:para>
+</maml:alert>
+</maml:alertSet>
+<!-- Example section  --> 
+<command:examples>
+<command:example>
+<maml:title>-------------------------- 例 1 --------------------------</maml:title> 
+<maml:introduction>
+<maml:para>C:\PS&gt;</maml:para>
+</maml:introduction> 
+<dev:code>Start-MdbTransaction
+
+C:\PS>Invoke-Mdb "Update table1 Set b = 'colb_change' Where a = 1"
+
+C:\PS>Complete-MdbTransaction</dev:code>
+<dev:remarks>
+<maml:para>説明</maml:para>
+<maml:para>-----------</maml:para>
+<maml:para>このコマンドは、接続しているデータベースのトランザクションを開始します。
+</maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+<command:commandLines>
+<command:commandLine>
+<command:commandText></command:commandText>
+</command:commandLine>
+</command:commandLines>
+</command:example>
+<command:example>
+<maml:title>-------------------------- 例 2 --------------------------</maml:title> 
+<maml:introduction>
+<maml:para>C:\PS&gt;</maml:para>
+</maml:introduction> 
+<dev:code>try
+>> {
+>>   Start-MdbTransaction
+>>   
+>>   Invoke-Mdb "Update table1 Set b = 'colb_change' Where a = 1"
+>>   
+>>   ・・・処理・・・
+>>   
+>>   Complete-MdbTransaction
+>> }
+>> catch
+>> {
+>>   Write-Warning "$_"
+>>   Undo-MdbTransaction
+>> }
+
+</dev:code>
+<dev:remarks>
+<maml:para>説明</maml:para>
+<maml:para>-----------</maml:para>
+<maml:para>このコマンドは、try の中でトランザクションを開始し、更新処理などを行ってコミットします。
+エラーが発生した場合は、ロールバックします。
+</maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+<command:commandLines>
+<command:commandLine>
+<command:commandText></command:commandText>
+</command:commandLine>
+</command:commandLines>
+</command:example>
+</command:examples>
+<!-- Input - Output section-->
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+<maml:name>System.String</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>
+<maml:description>
+<maml:para>
+<!-- description  -->
+パイプを使用して、データベース名 (String) を Start-MdbTransaction に渡すことができます。
+</maml:para>
+</maml:description>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>なし</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>   
+<maml:description>
+<maml:para>
+<!-- description  -->
+Start-MdbTransaction は出力を生成しません。
+</maml:para>
+</maml:description> 
+</command:returnValue>
+</command:returnValues>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><command:details>
+<command:name>Undo-MdbTransaction</command:name>
+<maml:description>
+<maml:para>トランザクションをロールバックします。</maml:para>
+</maml:description>
+<maml:copyright>
+<maml:para></maml:para>
+</maml:copyright>
+<command:verb>Undo</command:verb>
+<command:noun>MdbTransaction</command:noun>
+<dev:version></dev:version>
+</command:details>
+<maml:description>
+<maml:para>Undo-MdbTransaction は、開始しているトランザクションをロールバックします。</maml:para>
+</maml:description>
+<!-- Cmdlet syntax section-->
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Undo-MdbTransaction</maml:name>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<!-- Cmdlet parameter section  -->
+<command:parameters>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>指定されたデータベース名に対して操作を行います。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+</command:parameters>
+<!-- Error section-->
+<command:terminatingErrors/>
+<command:nonTerminatingErrors/>
+<!-- Notes section  -->
+<maml:alertSet>
+<maml:title></maml:title>
+<maml:alert>
+<maml:para>
+</maml:para>
+</maml:alert>
+<maml:alert>
+<maml:para></maml:para>
+</maml:alert>
+</maml:alertSet>
+<!-- Example section  --> 
+<command:examples>
+<command:example>
+<maml:title>-------------------------- 例 1 --------------------------</maml:title> 
+<maml:introduction>
+<maml:para>C:\PS&gt;</maml:para>
+</maml:introduction> 
+<dev:code>Undo-MdbTransaction</dev:code>
+<dev:remarks>
+<maml:para>説明</maml:para>
+<maml:para>-----------</maml:para>
+<maml:para>このコマンドは、開始しているトランザクションをロールバックします。
+</maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+<command:commandLines>
+<command:commandLine>
+<command:commandText></command:commandText>
+</command:commandLine>
+</command:commandLines>
+</command:example>
+</command:examples>
+<!-- Input - Output section-->
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+<maml:name>System.String</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>
+<maml:description>
+<maml:para>
+<!-- description  -->
+パイプを使用して、データベース名 (String) を Undo-MdbTransaction に渡すことができます。
+</maml:para>
+</maml:description>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>なし</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>   
+<maml:description>
+<maml:para>
+<!-- description  -->
+Undo-MdbTransaction は出力を生成しません。
+</maml:para>
+</maml:description> 
+</command:returnValue>
+</command:returnValues>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><command:details>
+<command:name>Open-MdbWithDotCommand</command:name>
+<maml:description>
+<maml:para>Mｄｂファイルとのデータベース接続を開きます。
+ドット(.)で始まるエイリアスを作成します。</maml:para>
+</maml:description>
+<maml:copyright>
+<maml:para></maml:para>
+</maml:copyright>
+<command:verb>Open</command:verb>
+<command:noun>MdbWithDotCommand</command:noun>
+<dev:version></dev:version>
+</command:details>
+<maml:description>
+<maml:para>Open-MdbWithDotCommand は、指定されたMdbファイルとのデータベース接続を開きます。
+データベースは一意となるデータベース名で管理します。
+データベース名の規定値は、main です。
+ドット(.)で始まるエイリアス(.execute、.columnsなど)を作成します。
+Open-MdbWithDotCommandの組み込みエイリアスは、 .mdb です。</maml:para>
+</maml:description>
+<!-- Cmdlet syntax section-->
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Open-MdbWithDotCommand</maml:name>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="-2147483648">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>データベース名を指定します。規定値は、"main"です。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+<command:parameter required="True" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>File</maml:name>
+<maml:description>
+<maml:para>Mdbファイルのパスを指定します。</maml:para>
+</maml:description>
+<command:parameterValue required="True" variableLength="True">string</command:parameterValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="1">
+<maml:name>Password</maml:name>
+<maml:description>
+<maml:para>Mdbファイルのパスワードを指定します。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+<command:parameter required="False" variableLength="False" globbing="False" pipelineInput="False" position="-2147483648">
+<maml:name>Create</maml:name>
+<maml:description>
+<maml:para>指定されたファイル名で、Mdbファイルを作成します。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="False">SwitchParameter</command:parameterValue>
+</command:parameter>
+<command:parameter required="False" variableLength="False" globbing="False" pipelineInput="False" position="-2147483648">
+<maml:name>PassThru</maml:name>
+<maml:description>
+<maml:para>データベースの接続情報を出力します。規定では、Open-Mdb による出力はありません。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="False">SwitchParameter</command:parameterValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="-2147483648">
+<maml:name>Prefix</maml:name>
+<maml:description>
+<maml:para>指定されたプレフィックスをエイリアス名の先頭に付けます</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="-2147483648">
+<maml:name>Postfix</maml:name>
+<maml:description>
+<maml:para>指定されたポストフィックスをエイリアス名の後ろに付けます</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<!-- Cmdlet parameter section  -->
+<command:parameters>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="-2147483648">
+<maml:name>DatabaseName</maml:name>
+<maml:description>
+<maml:para>データベース名を指定します。規定値は、"main"です。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue>main</dev:defaultValue>
+</command:parameter>
+<command:parameter required="True" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="0">
+<maml:name>File</maml:name>
+<maml:description>
+<maml:para>Mdbファイルのパスを指定します。</maml:para>
+</maml:description>
+<command:parameterValue required="True" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="true (ByPropertyName)" position="1">
+<maml:name>Password</maml:name>
+<maml:description>
+<maml:para>Mdbファイルのパスワードを指定します。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+<command:parameter required="False" variableLength="False" globbing="False" pipelineInput="False" position="-2147483648">
+<maml:name>Create</maml:name>
+<maml:description>
+<maml:para>指定されたファイル名で、Mdbファイルを作成します。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="False">SwitchParameter</command:parameterValue>
+<dev:type>
+<maml:name>SwitchParameter</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+<command:parameter required="False" variableLength="False" globbing="False" pipelineInput="False" position="-2147483648">
+<maml:name>PassThru</maml:name>
+<maml:description>
+<maml:para>データベースの接続情報を出力します。規定では、Open-Mdb による出力はありません。</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="False">SwitchParameter</command:parameterValue>
+<dev:type>
+<maml:name>SwitchParameter</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="-2147483648">
+<maml:name>Prefix</maml:name>
+<maml:description>
+<maml:para>指定されたプレフィックスをエイリアス名の先頭に付けます</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="-2147483648">
+<maml:name>Postfix</maml:name>
+<maml:description>
+<maml:para>指定されたポストフィックスをエイリアス名の後ろに付けます</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+</command:parameters>
+<!-- Error section-->
+<command:terminatingErrors/>
+<command:nonTerminatingErrors/>
+<!-- Notes section  -->
+<maml:alertSet>
+<maml:title></maml:title>
+<maml:alert>
+<maml:para>
+</maml:para>
+</maml:alert>
+<maml:alert>
+<maml:para></maml:para>
+</maml:alert>
+</maml:alertSet>
+<!-- Example section  --> 
+<command:examples>
+<command:example>
+<maml:title>-------------------------- 例 1 --------------------------</maml:title> 
+<maml:introduction>
+<maml:para>C:\PS&gt;</maml:para>
+</maml:introduction> 
+<dev:code>.mdb sample1.mdb
+
+C:\PS>.databases
+
+C:\PS>.columns
+
+C:\PS>.querys
+
+C:\PS>.execute 'select * from table1'
+
+C:\PS>.quit</dev:code>
+<dev:remarks>
+<maml:para>説明</maml:para>
+<maml:para>-----------</maml:para>
+<maml:para>このコマンドは、ドットコマンドのエイリアスを作成し、データベース接続を開始します。
+</maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+<command:commandLines>
+<command:commandLine>
+<command:commandText></command:commandText>
+</command:commandLine>
+</command:commandLines>
+</command:example>
+</command:examples>
+<!-- Input - Output section-->
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+<maml:name>System.String</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>
+<maml:description>
+<maml:para>
+<!-- description  -->
+パイプを使用して、データベース名 (String)、ファイル名  (String)、または パスワード (String) を Open-Mdb に渡すことができます。
+</maml:para>
+</maml:description>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>なし または System.Management.Automation.PSObject</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>   
+<maml:description>
+<maml:para>
+<!-- description  -->
+Open-MdbWithDotCommand は、PassThru パラメーターを使用すると、カスタムオブジェクト (MdbCommand.Mdb) を返します。それ以外の場合出力はありません。
+</maml:para>
+</maml:description> 
+</command:returnValue>
+</command:returnValues>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><command:details>
+<command:name>Use-MdbAliasCommand</command:name>
+<maml:description>
+<maml:para>エイリアスを作成します。</maml:para>
+</maml:description>
+<maml:copyright>
+<maml:para></maml:para>
+</maml:copyright>
+<command:verb>Use</command:verb>
+<command:noun>MdbAliasCommand</command:noun>
+<dev:version></dev:version>
+</command:details>
+<maml:description>
+<maml:para>Use-MdbAliasCommand は、設定にしたがって、エイリアスを作成します。
+設定は、ハッシュテーブル（$MdbCommandAliasConfig）に登録されており、変更することができます。</maml:para>
+</maml:description>
+<!-- Cmdlet syntax section-->
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Use-MdbAliasCommand</maml:name>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="0">
+<maml:name>Prefix</maml:name>
+<maml:description>
+<maml:para>指定されたプレフィックスをエイリアス名の先頭に付けます</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="1">
+<maml:name>Postfix</maml:name>
+<maml:description>
+<maml:para>指定されたポストフィックスをエイリアス名の後ろに付けます</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<!-- Cmdlet parameter section  -->
+<command:parameters>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="0">
+<maml:name>Prefix</maml:name>
+<maml:description>
+<maml:para>指定されたプレフィックスをエイリアス名の先頭に付けます</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="1">
+<maml:name>Postfix</maml:name>
+<maml:description>
+<maml:para>指定されたポストフィックスをエイリアス名の後ろに付けます</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+</command:parameters>
+<!-- Error section-->
+<command:terminatingErrors/>
+<command:nonTerminatingErrors/>
+<!-- Notes section  -->
+<maml:alertSet>
+<maml:title></maml:title>
+<maml:alert>
+<maml:para>
+</maml:para>
+</maml:alert>
+<maml:alert>
+<maml:para></maml:para>
+</maml:alert>
+</maml:alertSet>
+<!-- Example section  --> 
+<command:examples>
+<command:example>
+<maml:title>-------------------------- 例 1 --------------------------</maml:title> 
+<maml:introduction>
+<maml:para>C:\PS&gt;</maml:para>
+</maml:introduction> 
+<dev:code>Use-MdbAliasCommand -Prefix mdb-
+C:\PS>get-alias mdb-*
+CommandType     Name                                     Definition
+-----------     ----                                     ----------
+Alias           mdb-begin                                Start-MdbTransaction
+Alias           mdb-close                                Close-Mdb
+Alias           mdb-columns                              Get-MdbColumn
+Alias           mdb-commit                               Complete-MdbTransaction
+Alias           mdb-console                              Start-MdbConsole
+Alias           mdb-create                               New-MdbFile
+Alias           mdb-databases                            Get-Mdb
+Alias           mdb-execute                              Invoke-Mdb
+Alias           mdb-executebatch                         Invoke-MdbBatch
+Alias           mdb-executequery                         Invoke-MdbQuery
+Alias           mdb-indices                              Get-MdbIndex
+Alias           mdb-open                                 Open-Mdb
+Alias           mdb-path                                 Get-MdbFilePath
+Alias           mdb-querys                               Get-MdbQuery
+Alias           mdb-quit                                 Close-Mdb
+Alias           mdb-rollback                             Undo-MdbTransaction
+Alias           mdb-tables                               Get-MdbTable</dev:code>
+<dev:remarks>
+<maml:para>説明</maml:para>
+<maml:para>-----------</maml:para>
+<maml:para>このコマンドは、設定されているエイリアス名の先頭に、 mdb-のプレフィックスを付けてエイリアスを作成します。
+この例では、mdb-columns、mdb-execute などのエイリアスが作成されます。
+</maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+<command:commandLines>
+<command:commandLine>
+<command:commandText></command:commandText>
+</command:commandLine>
+</command:commandLines>
+</command:example>
+</command:examples>
+<!-- Input - Output section-->
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+<maml:name>なし</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>
+<maml:description>
+<maml:para>
+<!-- description  -->
+パイプを使用してオブジェクトを Use-MdbAliasCommand に渡すことはできません。
+</maml:para>
+</maml:description>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>なし</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>   
+<maml:description>
+<maml:para>
+<!-- description  -->
+Use-MdbAliasCommand は出力を生成しません。
+</maml:para>
+</maml:description> 
+</command:returnValue>
+</command:returnValues>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"><command:details>
+<command:name>Use-MdbDotCommand</command:name>
+<maml:description>
+<maml:para>ドットコマンドのエイリアスを作成します。</maml:para>
+</maml:description>
+<maml:copyright>
+<maml:para></maml:para>
+</maml:copyright>
+<command:verb>Use</command:verb>
+<command:noun>MdbDotCommand</command:noun>
+<dev:version></dev:version>
+</command:details>
+<maml:description>
+<maml:para>Use-MdbDotCommand は、設定にしたがって、エイリアスを作成します。
+設定は、ハッシュテーブル（$MdbCommandAliasConfig）に登録されており、変更することができます。
+規定では、エイリアス名の先頭にドット(.)が追加されます。</maml:para>
+</maml:description>
+<!-- Cmdlet syntax section-->
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Use-MdbDotCommand</maml:name>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="0">
+<maml:name>Prefix</maml:name>
+<maml:description>
+<maml:para>指定されたプレフィックスをエイリアス名の先頭に付けます</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="1">
+<maml:name>Postfix</maml:name>
+<maml:description>
+<maml:para>指定されたプレフィックスをエイリアス名の先頭に付けます</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<!-- Cmdlet parameter section  -->
+<command:parameters>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="0">
+<maml:name>Prefix</maml:name>
+<maml:description>
+<maml:para>指定されたプレフィックスをエイリアス名の先頭に付けます</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue>.</dev:defaultValue>
+</command:parameter>
+<command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="1">
+<maml:name>Postfix</maml:name>
+<maml:description>
+<maml:para>指定されたプレフィックスをエイリアス名の先頭に付けます</maml:para>
+</maml:description>
+<command:parameterValue required="False" variableLength="True">string</command:parameterValue>
+<dev:type>
+<maml:name>string</maml:name>
+<maml:uri/>
+</dev:type>
+<dev:defaultValue></dev:defaultValue>
+</command:parameter>
+</command:parameters>
+<!-- Error section-->
+<command:terminatingErrors/>
+<command:nonTerminatingErrors/>
+<!-- Notes section  -->
+<maml:alertSet>
+<maml:title></maml:title>
+<maml:alert>
+<maml:para>
+</maml:para>
+</maml:alert>
+<maml:alert>
+<maml:para></maml:para>
+</maml:alert>
+</maml:alertSet>
+<!-- Example section  --> 
+<command:examples>
+<command:example>
+<maml:title>-------------------------- 例 1 --------------------------</maml:title> 
+<maml:introduction>
+<maml:para>C:\PS&gt;</maml:para>
+</maml:introduction> 
+<dev:code>Use-MdbDotCommand
+C:\PS>get-alias .*
+CommandType     Name                                     Definition
+-----------     ----                                     ----------
+Alias           .begin                                   Start-MdbTransaction
+Alias           .close                                   Close-Mdb
+Alias           .columns                                 Get-MdbColumn
+Alias           .commit                                  Complete-MdbTransaction
+Alias           .console                                 Start-MdbConsole
+Alias           .create                                  New-MdbFile
+Alias           .databases                               Get-Mdb
+Alias           .execute                                 Invoke-Mdb
+Alias           .executebatch                            Invoke-MdbBatch
+Alias           .executequery                            Invoke-MdbQuery
+Alias           .indices                                 Get-MdbIndex
+Alias           .mdb                                     Open-MdbWithDotCommand
+Alias           .open                                    Open-Mdb
+Alias           .path                                    Get-MdbFilePath
+Alias           .querys                                  Get-MdbQuery
+Alias           .quit                                    Close-Mdb
+Alias           .rollback                                Undo-MdbTransaction
+Alias           .tables                                  Get-MdbTable</dev:code>
+<dev:remarks>
+<maml:para>説明</maml:para>
+<maml:para>-----------</maml:para>
+<maml:para>このコマンドは、既定ではUse-MdbAliasCommand -Prefix '.' を実行します。
+この例では、.columns、.execute などのエイリアスが作成されます。
+</maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+<command:commandLines>
+<command:commandLine>
+<command:commandText></command:commandText>
+</command:commandLine>
+</command:commandLines>
+</command:example>
+</command:examples>
+<!-- Input - Output section-->
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+<maml:name>なし</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>
+<maml:description>
+<maml:para>
+<!-- description  -->
+パイプを使用してオブジェクトを Use-MdbDotCommand に渡すことはできません。
+</maml:para>
+</maml:description>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>なし</maml:name>
+<maml:uri/>
+<maml:description/>
+</dev:type>   
+<maml:description>
+<maml:para>
+<!-- description  -->
+ Use-MdbAliasCommand は出力を生成しません。
+</maml:para>
+</maml:description> 
+</command:returnValue>
+</command:returnValues>
+</command:command>
+</helpItems>
