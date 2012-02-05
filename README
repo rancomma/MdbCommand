@@ -1,6 +1,18 @@
 README
 
+  [Install Guide]
+  1. Check PSModulePath
+  C:\PS>$env:PSModulePath -split ";"
+  C:\Users\UserName\Documents\WindowsPowerShell\Modules
+  C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+
+  2. Copy MdbCommand Folder
+  C:\Users\UserName\Documents\WindowsPowerShell\Modules\MdbCommand
+
+
   [MdbCommand Exsamples]
+
+  C:\PS>ipmo MdbCommand
 
   C:\PS>Open-Mdb newsample.mdb -Create
 
