@@ -586,13 +586,13 @@ function Get-MdbSchema
           @{l="TableName"; e="TABLE_NAME"}
           @{l="Position"; e="ORDINAL_POSITION"}
           @{l="ColumnName"; e="COLUMN_NAME"}
-          @{l="DataType"; e={& $DataTypeConverter $_}}
-          @{l="AliasType"; e={& $AliasDataTypeConverter $_}}
-          @{l="Size"; e={& $SizeConverter $_}}
+          @{l="DataType"; e={& $DataTypeConverter}}
+          @{l="AliasType"; e={& $AliasDataTypeConverter}}
+          @{l="Size"; e={& $SizeConverter}}
           @{l="NotNull"; e={if($_.IS_NULLABLE) {$null} else {"YES"}}}
           @{l="Default"; e="COLUMN_DEFAULT"}
-          @{l="PrimaryKey"; e={& $PrimaryKeyConverter $_}}
-          @{l="AutoIncrement"; e={& $AutoIncrementConverter $_}}
+          @{l="PrimaryKey"; e={& $PrimaryKeyConverter}}
+          @{l="AutoIncrement"; e={& $AutoIncrementConverter}}
           @{l="Description"; e="DESCRIPTION"}) `
         | % {$_.psobject.TypeNames.Insert(0, "MdbCommand.MdbColumn"); $_} 
         if ($TableSchemas.Count)
