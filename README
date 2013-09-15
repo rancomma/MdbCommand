@@ -9,6 +9,8 @@ README
   2. Copy MdbCommand Folder
   C:\Users\UserName\Documents\WindowsPowerShell\Modules\MdbCommand
 
+  ___There is no 64-bit version of the Jet Database Engine___
+  ___if 64-bit os then using WOW64 (ex C:/Windows/SysWOW64/WindowsPowerShell/v1.0/powershell.exe)___
 
   [MdbCommand Exsamples]
 
