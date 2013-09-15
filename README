@@ -9,6 +9,7 @@ README
   2. Copy MdbCommand Folder
   C:\Users\UserName\Documents\WindowsPowerShell\Modules\MdbCommand
 
+  if using 64bitOS: run with WOW64(32bit) powershell
 
   [MdbCommand Exsamples]
 
